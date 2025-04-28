@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #e6ffe6; /* Light greenish background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: #ffe6e6; /* Very light pinkish background */
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            width: 70%; /* Increased width for broader space */
+            max-width: 900px; /* Maximum width to prevent it from getting too wide */
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #343a40;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea,
+        select {
+            width: calc(100% - 20px);
+            padding: 12px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        textarea:focus,
+        select:focus {
+            border-color: #80bdff;
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .radio-group label {
+            display: inline-block;
+            margin-right: 20px;
+            font-weight: normal;
+            color: #495057;
+        }
+
+        button[type="submit"] {
+            background-color: #1a73e8;
+            color: white;
+            padding: 14px 24px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.2s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0d6efd;
+        }
+
+        button[type="submit"]:active {
+            transform: translateY(1px);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="form-container">
+        <h1> <center>Neuro Nexus Innovations Task</center></h1>
+        <form>
+            <div class="form-group">
+                <label for="full-name">Full Name:</label>
+                <input type="text" id="full-name" name="full-name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="contact-number">Contact Number:</label>
+                <input type="tel" id="contact-number" name="contact-number">
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="company-name">Company Name:</label>
+                <input type="text" id="company-name" name="company-name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="department">Department:</label>
+                <select id="department" name="department">
+                    <option value="HR">HR</option>
+                    <option value="Sales">Sales</option>
+                    <option value="Development">Development</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+
+            <div class="form-group radio-group">
+                <label>Gender:</label><br>
+                <label for="male">
+                    <input type="radio" id="male" name="gender" value="male"> Male
+                </label>
+                <label for="female">
+                    <input type="radio" id="female" name="gender" value="female"> Female
+                </label>
+                <label for="prefer-not-to-say">
+                    <input type="radio" id="prefer-not-to-say" name="gender" value="prefer-not-to-say"> Prefer not to say
+                </label>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
